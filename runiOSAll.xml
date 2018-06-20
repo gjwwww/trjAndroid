@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="投融家ios自动化测试" parallel="tests" thread-count="1">
+    <!--server地址  -->
+    <parameter name="serverURL" value="http://127.0.0.1:4723/wd/hub" />
+    <!--automationName为selendroid or appium，如果sdk版本>=17请使用appium；如果sdk版本<=17请使用selendroid-->
+    <parameter name="automationName" value="XCUITest" />
+    <!-- 测试平台 iOS和Android-->
+    <parameter name="platformName" value="ios" />
+    <!-- 平台版本 -->
+    <parameter name="platformVersion" value="10.2.1" />
+    <!--设备名字，可随意起名字，但是要有意义 -->
+    <parameter name="deviceName" value="iPhone 5s" />
+    <!--ios 的bundleId-->
+    <parameter name="bundleId" value="com.trj.hp"/>
+    <!-- android app路径 -->
+    <parameter name="androidAppPath" value="res/app/android/TrjAndroid_V2.1.0_debug.apk" />
+    <!-- ios app路径 -->
+    <parameter name="iosAppPath" value="res/app/ios/touRong.ipa" />
+    <!--app的包  -->
+    <parameter name="appPackage" value="com.trj.hp" />
+    <!--app的 activity  -->
+    <parameter name="appActivity" value="com.trj.hp.ui.LoadingActivity" />
+    <!--是否支持unicode输入设置为true可以输入中文字符  -->
+    <parameter name="unicodeKeyboard" value="true" />
+    <!-- 重置键盘输入法 -->
+    <parameter name="resetKeyboard" value="true" />
+    <!--设备UDID iPhone真机使用或者android并行测试可以使用  -->
+    <parameter name="udid" value="800ace47badb1b91e7b11353ecbdf925574242fa" />
+    <!-- 设置为true之后会覆盖当前session -->
+    <parameter name="sessionOverride" value="true" />
+    <!-- 进程等待1秒中的控制时间，单位是秒 -->
+    <parameter name="sleepTime" value="1" />
+    <!-- 页面元素15秒不出现超时时间 -->
+    <parameter name="elementTimeOut" value="15" />
+    <!-- app属性文件 -->
+    <parameter name="appFilePath" value="res/properties/app.properties" />
+
+    <test name="LogIn"  preserve-order="true">
+        <classes>
+            <class name ="com.trjtest.test.testcases.LogIn.LogIn_005_loginpassed" />
+        </classes>
+    </test>
+
+    <listeners>
+        <!-- excel报告 -->
+        <listener class-name="com.trjtest.test.plugins.excelReporter.TestResultListener" />
+        <listener class-name="com.trjtest.test.plugins.excelReporter.ExcelReporter" />
+    </listeners>
+
+</suite>

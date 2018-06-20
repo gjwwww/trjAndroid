@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
+  <test name="trjtest">
+    <classes>
+      <class name="com.trjtest.test.testcases.Invest.Invest_001_investTest">
+        <methods>
+          <include name="invest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.trjtest.test.testcases.Invest.Invest_001_investTest -->
+      <class name="com.trjtest.test.testcases.Register.Register_009_registerTest">
+        <methods>
+          <include name="register" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.trjtest.test.testcases.Register.Register_009_registerTest -->
+      <class name="com.trjtest.test.testcases.LogIn.LogIn_005_loginpassed">
+        <methods>
+          <include name="LogIn" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.trjtest.test.testcases.LogIn.LogIn_005_loginpassed -->
+      <class name="com.trjtest.test.base.BasePrepare">
+        <methods>
+          <include name="initTest"/>
+        </methods>
+      </class> <!-- com.trjtest.test.base.BasePrepare -->
+    </classes>
+  </test> <!-- trjtest -->
+  <test name="trjtest(failed)">
+    <classes>
+      <class name="com.trjtest.test.testcases.LogIn.LogIn_005_loginpassed">
+        <methods>
+          <include name="LogIn" invocation-numbers="0 0 0 0"/>
+        </methods>
+      </class> <!-- com.trjtest.test.testcases.LogIn.LogIn_005_loginpassed -->
+      <class name="com.trjtest.test.testcases.Register.Register_009_registerTest">
+        <methods>
+          <include name="register" invocation-numbers="0 0 0 0 0"/>
+        </methods>
+      </class> <!-- com.trjtest.test.testcases.Register.Register_009_registerTest -->
+      <class name="com.trjtest.test.testcases.Invest.Invest_001_investTest">
+        <methods>
+          <include name="invest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.trjtest.test.testcases.Invest.Invest_001_investTest -->
+    </classes>
+  </test> <!-- trjtest(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

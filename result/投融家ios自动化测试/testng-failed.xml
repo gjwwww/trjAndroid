@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [投融家ios自动化测试]" parallel="tests">
+  <parameter name="appPackage" value="com.trj.hp"/>
+  <parameter name="androidAppPath" value="res/app/android/TrjAndroid_V2.1.0_debug.apk"/>
+  <parameter name="bundleId" value="com.trj.hp"/>
+  <parameter name="elementTimeOut" value="15"/>
+  <parameter name="deviceName" value="iPhone 5s"/>
+  <parameter name="iosAppPath" value="res/app/ios/touRong.ipa"/>
+  <parameter name="appActivity" value="com.trj.hp.ui.LoadingActivity"/>
+  <parameter name="serverURL" value="http://127.0.0.1:4723/wd/hub"/>
+  <parameter name="platformVersion" value="10.2.1"/>
+  <parameter name="automationName" value="XCUITest"/>
+  <parameter name="appFilePath" value="res/properties/app.properties"/>
+  <parameter name="sleepTime" value="1"/>
+  <parameter name="unicodeKeyboard" value="true"/>
+  <parameter name="sessionOverride" value="true"/>
+  <parameter name="platformName" value="ios"/>
+  <parameter name="udid" value="800ace47badb1b91e7b11353ecbdf925574242fa"/>
+  <parameter name="resetKeyboard" value="true"/>
+  <listeners>
+    <listener class-name="com.trjtest.test.plugins.excelReporter.TestResultListener"/>
+    <listener class-name="com.trjtest.test.plugins.excelReporter.ExcelReporter"/>
+  </listeners>
+  <test name="LogIn">
+    <classes>
+      <class name="com.trjtest.test.testcases.LogIn.LogIn_005_loginpassed"/>
+    </classes>
+  </test> <!-- LogIn -->
+  <test name="LogIn(failed)" parallel="tests">
+    <classes>
+      <class name="com.trjtest.test.testcases.LogIn.LogIn_005_loginpassed">
+        <methods>
+          <include name="LogIn"/>
+          <include name="initTest"/>
+          <include name="cleanTest"/>
+        </methods>
+      </class> <!-- com.trjtest.test.testcases.LogIn.LogIn_005_loginpassed -->
+    </classes>
+  </test> <!-- LogIn(failed) -->
+</suite> <!-- Failed suite [投融家ios自动化测试] -->

@@ -1,0 +1,26 @@
+{
+  "capabilities": [
+    {
+      "deviceName": "7C5907B08729",
+      "version": "4.4.4",
+      "maxInstances": 3,
+      "platform": "ANDROID",
+      "browserName": "chrome"
+    }
+  ],
+  "configuration": {
+    "cleanUpCycle": 2000,
+    "timeout": 300000,
+    "browserTimeout": 60000,
+    "hub":"127.0.0.1:4444/grid/register",
+    "host":"172.16.20.145",
+    "maxSession": 6,
+    "port": 4725,
+    "hubPort": 4444,
+    "hubHost": "172.16.20.145",
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "url": "http://127.0.0.1:4725/wd/hub",
+    "register": true,
+    "registerCycle": 5000
+  }
+}

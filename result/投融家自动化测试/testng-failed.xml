@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [投融家自动化测试]" parallel="tests">
+  <parameter name="appPackage" value="com.trj.hp"/>
+  <parameter name="androidAppPath" value="res/app/android/TrjAndroid_V2.1.0_debug.apk"/>
+  <parameter name="elementTimeOut" value="5"/>
+  <parameter name="deviceName" value="魅族"/>
+  <parameter name="iosAppPath" value="res/app/ios/xxx.app"/>
+  <parameter name="appActivity" value="com.trj.hp.ui.LoadingActivity"/>
+  <parameter name="serverURL" value="http://127.0.0.1:4444/wd/hub"/>
+  <parameter name="platformVersion" value="5.1"/>
+  <parameter name="automationName" value="Appium"/>
+  <parameter name="appFilePath" value="res/properties/app.properties"/>
+  <parameter name="sleepTime" value="1"/>
+  <parameter name="unicodeKeyboard" value="true"/>
+  <parameter name="sessionOverride" value="true"/>
+  <parameter name="platformName" value="Android"/>
+  <parameter name="udid" value="7C5907B08729"/>
+  <parameter name="resetKeyboard" value="true"/>
+  <listeners>
+    <listener class-name="com.trjtest.test.plugins.excelReporter.TestResultListener"/>
+    <listener class-name="com.trjtest.test.plugins.excelReporter.ExcelReporter"/>
+  </listeners>
+  <test name="LogIn">
+    <parameter name="platformVersion" value="6.0.1"/>
+    <parameter name="udid" value="c493c270"/>
+    <parameter name="deviceName" value="三星Note 4"/>
+    <classes>
+      <class name="com.trjtest.test.testcases.LogIn.LogIn_005_loginpassed"/>
+    </classes>
+  </test> <!-- LogIn -->
+  <test name="Register">
+    <parameter name="platformVersion" value="4.4.4"/>
+    <parameter name="udid" value="7C5907B08729"/>
+    <parameter name="deviceName" value="魅族"/>
+    <classes>
+      <class name="com.trjtest.test.testcases.Register.Register_009_registerTest"/>
+    </classes>
+  </test> <!-- Register -->
+</suite> <!-- Failed suite [投融家自动化测试] -->
